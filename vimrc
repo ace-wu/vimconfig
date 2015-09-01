@@ -41,7 +41,7 @@ NeoBundle 'sukima/xmledit',          {'name': 'xmledit'}
 NeoBundle 'majutsushi/tagbar',       {'name': 'tagbar'}
 NeoBundle 'motus/pig.vim',           {'name': 'pig-hl'}
 NeoBundle 'vim-ruby/vim-ruby',       {'name': 'ruby'}
-NeoBundle 'chrisbra/Colorizer.git',  {'name': 'colorizer'}
+NeoBundle 'chrisbra/Colorizer',      {'name': 'colorizer'}
     map ,co :ColorToggle<CR>
 NeoBundle 'pangloss/vim-javascript', {'name': 'js'}
 "    let g:javascript_conceal=1
@@ -58,14 +58,14 @@ NeoBundle 'wlangstroth/vim-racket',  {'name': 'racket'}
 NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
 NeoBundle 'chrisbra/vim-diff-enhanced', {}
 
-NeoBundle 'git@github.com:ace-wu/python_fold.git',       {'name': 'python-fold'}
-NeoBundle 'git@github.com:ace-wu/nginx-vim-syntax.git',  {'name': 'nginx-hl'}
-NeoBundle 'git@github.com:ace-wu/vim-sml-coursera.git',  {'name': 'sml'}
-NeoBundle 'git@github.com:ace-wu/vim-distinguished.git', {'name': 'theme-distinguished'}
-"NeoBundle 'git@github.com:wlangstroth/vim-racket.git',   {}
+NeoBundle 'ace-wu/python_fold',       {'name': 'python-fold'}
+NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
+NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
+NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
+"NeoBundle 'wlangstroth/vim-racket',   {}
 
-"NeoBundle 'git@github.com:tikhomirov/vim-glsl.git', {'name': 'glsl'}
-NeoBundle 'git@github.com:eapache/rainbow_parentheses.vim.git',    {'name': 'rainbow'}
+"NeoBundle 'tikhomirov/vim-glsl', {'name': 'glsl'}
+NeoBundle 'eapache/rainbow_parentheses.vim',    {'name': 'rainbow'}
     map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
     let g:rbpt_colorpairs = [
@@ -149,10 +149,12 @@ set history=500
 set formatoptions+=mB  " see :h fo-table
 set autochdir
 set modeline modelines=5
-set conceallevel=2
 set nowrap
 set nobackup
 "set backup backupdir=~/tmp,.,/var/tmp/vi,/tmp
+if version >= 703
+    set conceallevel=2
+endif
 
 if has("win32") || has("win64")
     set directory=.,C:\WINDOWS\Temp
