@@ -33,7 +33,9 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
-NeoBundle 'jtratner/vim-flavored-markdown',    {'name': 'markdown'}
+NeoBundle 'plasticboy/vim-markdown', {'name': 'markdown'}
+    let g:vim_markdown_no_default_key_mappings=1
+
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
 NeoBundle 'vim-scripts/py-coverage', {'name': 'python-coverage'}
@@ -174,7 +176,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
     autocmd BufRead,BufNewFile,BufEnter *.json setlocal ft=javascript
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
-    autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
+    "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
 
     " file system navigation
