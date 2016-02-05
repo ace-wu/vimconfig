@@ -16,10 +16,10 @@ ycm_clean:
 	cd $(BUNDLE_DIR) && git clean -ffxd
 
 ycm: ycm_update
-	cd $(BUNDLE_DIR) && ./install.sh
+	cd $(BUNDLE_DIR) && python ./install.py
 
 ycm_clang: ycm_update
-	cd $(BUNDLE_DIR) && ./install.sh --clang-completer
+	cd $(BUNDLE_DIR) && python ./install.py --clang-completer
 
 # references & notes:
 # env GIT_SSL_NO_VERIFY=true
