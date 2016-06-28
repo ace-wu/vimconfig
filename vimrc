@@ -64,6 +64,7 @@ NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
 NeoBundle 'wlangstroth/vim-racket',  {'name': 'racket'}
 NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
 NeoBundle 'chrisbra/vim-diff-enhanced', {}
+    let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 NeoBundle 'jmcantrell/vim-virtualenv', {'name': 'virtualenv'}
 
 NeoBundle 'ace-wu/python_fold',       {'name': 'python-fold'}
