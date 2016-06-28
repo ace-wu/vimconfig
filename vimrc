@@ -26,8 +26,8 @@ NeoBundle 'Valloric/YouCompleteMe', {'name': 'you-complete-me'}
 NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
-    let g:syntastic_error_symbol = "✗"
-    let g:syntastic_warning_symbol = "⚠"
+    let g:syntastic_error_symbol = "x"
+    let g:syntastic_warning_symbol = "!"
     let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
     let g:syntastic_javascript_checkers = ['closurecompiler', 'jshint']
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
