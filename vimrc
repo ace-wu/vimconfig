@@ -171,6 +171,9 @@ endif
 
 set tags=./tags;/
 
+map ,sp :set spell spelllang=en_us<CR>
+cmap w!! w !sudo tee > /dev/null %
+
 if has("autocmd")
     filetype plugin indent on
     autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal! g'\"" | endif
