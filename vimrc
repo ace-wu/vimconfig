@@ -186,7 +186,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
 
     " file system navigation
-    autocmd BufNewFile,BufRead * nmap g. :e %:p:h<CR>
+    autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
     autocmd FileType netrw       nmap g. -
 
     autocmd FileType c,cpp       setlocal cindent
