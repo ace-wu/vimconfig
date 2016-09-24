@@ -122,6 +122,7 @@ if has("gui_running")
     elseif has("gui_macvim")
         set guifont=Monaco:h15,Consolas:h16
     elseif has("unix")
+        behave mswin
         set guifont=DejaVu\ Sans\ Mono\ 12
     endif
     set guioptions+=b   " Enable horizontal scroll bar
