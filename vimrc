@@ -66,6 +66,7 @@ NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
 NeoBundle 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 NeoBundle 'jmcantrell/vim-virtualenv', {'name': 'virtualenv'}
+NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
 
 NeoBundle 'ace-wu/python_fold',       {'name': 'python-fold'}
 NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
