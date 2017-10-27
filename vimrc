@@ -181,7 +181,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.wsgi setlocal ft=python
     autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
-    autocmd BufRead,BufNewFile,BufEnter *.json setlocal ft=javascript
+    autocmd BufRead,BufNewFile,BufEnter *.json setlocal ft=json conceallevel=0
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
