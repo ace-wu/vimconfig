@@ -34,8 +34,7 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
 NeoBundle 'godlygeek/tabular',       {'name': 'tabular'}
-NeoBundle 'plasticboy/vim-markdown', {'name': 'markdown'}
-    let g:vim_markdown_no_default_key_mappings=1
+NeoBundle 'gabrielelana/vim-markdown', {'name': 'markdown'}
 
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
