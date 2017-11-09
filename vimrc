@@ -35,6 +35,8 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
 
 NeoBundle 'godlygeek/tabular',       {'name': 'tabular'}
 NeoBundle 'gabrielelana/vim-markdown', {'name': 'markdown'}
+NeoBundle 'elzr/vim-json', {'name': 'json'}
+    let g:vim_json_syntax_conceal = 0
 
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
@@ -181,7 +183,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.wsgi setlocal ft=python
     autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
-    autocmd BufRead,BufNewFile,BufEnter *.json setlocal ft=json conceallevel=0
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
