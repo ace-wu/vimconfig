@@ -226,4 +226,6 @@ if has("autocmd")
     "autocmd BufRead *.txt set textwidth=78  " When editing a file, always jump to the last cursor position
 endif
 
+let mapleader=","
+
 syntax on
