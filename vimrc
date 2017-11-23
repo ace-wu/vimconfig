@@ -37,6 +37,7 @@ NeoBundle 'godlygeek/tabular',       {'name': 'tabular'}
 NeoBundle 'gabrielelana/vim-markdown', {'name': 'markdown'}
 NeoBundle 'elzr/vim-json', {'name': 'json'}
     let g:vim_json_syntax_conceal = 0
+NeoBundle 'autowitch/hive.vim', {'name': 'hive'}
 
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
@@ -186,6 +187,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
+    autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
     " file system navigation
     autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
@@ -206,6 +208,8 @@ if has("autocmd")
     autocmd FileType make        setlocal list noet
     autocmd FileType changelog   setlocal list et
 
+    autocmd FileType sql         setlocal ts=2 sts=2 sw=2
+    autocmd FileType hive        setlocal ts=2 sts=2 sw=2
     autocmd FileType javascript  setlocal ts=2 sts=2 sw=2 | let javaScript_fold=1
     autocmd FileType css         setlocal ts=2 sts=2 sw=2
     autocmd FileType html,xml    setlocal ts=2 sts=2 sw=2
