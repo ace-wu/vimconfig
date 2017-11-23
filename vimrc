@@ -54,7 +54,7 @@ NeoBundle 'chrisbra/Colorizer',      {'name': 'colorizer'}
     map ,co :ColorToggle<CR>
 NeoBundle 'pangloss/vim-javascript', {'name': 'js'}
 "    let g:javascript_conceal=1
-NeoBundle 'marijnh/tern_for_vim',    {'name': 'js-tern', 'build': 'npm install'}
+"NeoBundle 'marijnh/tern_for_vim',    {'name': 'js-tern', 'build': 'npm install'}
 NeoBundle 'tikhomirov/vim-glsl',     {'name': 'glsl'}
 "NeoBundle 'nanotech/jellybeans.vim', {'name': 'theme-jellybeans'}
 NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
