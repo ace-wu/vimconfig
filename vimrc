@@ -55,7 +55,6 @@ NeoBundle 'chrisbra/Colorizer',      {'name': 'colorizer'}
 NeoBundle 'pangloss/vim-javascript', {'name': 'js'}
 "    let g:javascript_conceal=1
 "NeoBundle 'marijnh/tern_for_vim',    {'name': 'js-tern', 'build': 'npm install'}
-NeoBundle 'tikhomirov/vim-glsl',     {'name': 'glsl'}
 "NeoBundle 'nanotech/jellybeans.vim', {'name': 'theme-jellybeans'}
 NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
     let g:gitgutter_sign_added = '+ '
@@ -63,7 +62,6 @@ NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
     let g:gitgutter_sign_removed = '_ '
     let g:gitgutter_sign_removed_first_line = '^ '
     let g:gitgutter_sign_modified_removed = '~_'
-NeoBundle 'wlangstroth/vim-racket',  {'name': 'racket'}
 NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
 NeoBundle 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
@@ -71,11 +69,11 @@ NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
 
 NeoBundle 'ace-wu/python_fold',       {'name': 'python-fold'}
 NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
-NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
 NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
-"NeoBundle 'wlangstroth/vim-racket',   {}
-
+"NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
+"NeoBundle 'wlangstroth/vim-racket',  {'name': 'racket'}
 "NeoBundle 'tikhomirov/vim-glsl', {'name': 'glsl'}
+
 NeoBundle 'eapache/rainbow_parentheses.vim',    {'name': 'rainbow'}
     map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
@@ -185,7 +183,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
-    autocmd BufRead,BufNewFile,BufEnter www_web.log setlocal ft=messages
     autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
     " file system navigation
@@ -222,7 +219,6 @@ if has("autocmd")
     "autocmd FileType sh          let sh_fold_enabled=1
 
     "autocmd BufWritePost *.c,*.cpp,*.h,*.py silent! !ctags -R &>/dev/null &
-    "autocmd BufRead *.txt set textwidth=78  " When editing a file, always jump to the last cursor position
 endif
 
 let mapleader=","
