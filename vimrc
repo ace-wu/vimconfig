@@ -38,6 +38,7 @@ NeoBundle 'vim-scripts/py-coverage', {'name': 'python-coverage'}
 NeoBundle 'tmhedberg/SimpylFold',    {'name': 'python-simple-fold'}
 
 NeoBundle 'pedrohdz/vim-yaml-folds', {'name': 'yaml-fold'}
+NeoBundle 'NLKNguyen/cloudformation-syntax.vim', {'name': 'cloudformation'}
 
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
 NeoBundle 'vim-scripts/LargeFile',   {'name': 'largefile'}
@@ -179,6 +180,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
+    autocmd BufRead,BufNewFile,BufEnter *cloudformation/*.yaml setlocal ft=cloudformation
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
