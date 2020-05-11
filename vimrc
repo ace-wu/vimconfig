@@ -16,6 +16,8 @@ NeoBundle 'tpope/vim-fugitive', {'name': 'git-fugitive'}
 NeoBundle 'tpope/vim-repeat', {'name': 'repeat'}
 NeoBundle 'tpope/vim-surround', {'name': 'surround'}
 
+NeoBundle 'zxqfl/tabnine-vim', {'name': 'tabnine'}
+
 NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
