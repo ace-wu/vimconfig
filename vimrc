@@ -22,6 +22,7 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     let g:syntastic_error_symbol = "x"
     let g:syntastic_warning_symbol = "!"
     let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+    let g:syntastic_yaml_checkers = ['yamllint']
     let g:syntastic_javascript_checkers = ['closurecompiler', 'jshint']
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
@@ -35,6 +36,8 @@ NeoBundle 'autowitch/hive.vim', {'name': 'hive'}
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
 NeoBundle 'vim-scripts/py-coverage', {'name': 'python-coverage'}
 NeoBundle 'tmhedberg/SimpylFold',    {'name': 'python-simple-fold'}
+
+NeoBundle 'pedrohdz/vim-yaml-folds', {'name': 'yaml-fold'}
 
 NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
 NeoBundle 'vim-scripts/LargeFile',   {'name': 'largefile'}
