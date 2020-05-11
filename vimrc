@@ -28,6 +28,7 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
 NeoBundle 'godlygeek/tabular',       {'name': 'tabular'}
+    map ,== :Tab /=<CR>
 NeoBundle 'gabrielelana/vim-markdown', {'name': 'markdown'}
 NeoBundle 'elzr/vim-json', {'name': 'json'}
     let g:vim_json_syntax_conceal = 0
@@ -170,6 +171,8 @@ endif
 
 set tags=./tags;/
 
+" close preview window
+map ,pc :pclose<CR>
 map ,sp :set spell spelllang=en_us<CR>
 cmap w!! w !sudo tee > /dev/null %
 
