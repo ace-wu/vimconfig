@@ -16,13 +16,6 @@ NeoBundle 'tpope/vim-fugitive', {'name': 'git-fugitive'}
 NeoBundle 'tpope/vim-repeat', {'name': 'repeat'}
 NeoBundle 'tpope/vim-surround', {'name': 'surround'}
 
-"NeoBundle 'Valloric/YouCompleteMe', {'name': 'you-complete-me'}
-"    let g:ycm_autoclose_preview_window_after_insertion=1
-    "let g:ycm_server_keep_logfiles = 1
-    "let g:ycm_server_log_level = 'debug'
-
-"NeoBundle 'rdnetto/YCM-Generator', {'name': 'ycm-generator'}
-
 NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
