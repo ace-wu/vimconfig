@@ -33,8 +33,10 @@ NeoBundle 'elzr/vim-json', {'name': 'json'}
 NeoBundle 'autowitch/hive.vim', {'name': 'hive'}
 
 NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
-NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
 NeoBundle 'vim-scripts/py-coverage', {'name': 'python-coverage'}
+NeoBundle 'tmhedberg/SimpylFold',    {'name': 'python-simple-fold'}
+
+NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
 NeoBundle 'vim-scripts/LargeFile',   {'name': 'largefile'}
     let g:LargeFile=1
 NeoBundle 'vim-scripts/taglist.vim', {'name': 'taglist'}
@@ -60,7 +62,6 @@ NeoBundle 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
 
-NeoBundle 'ace-wu/python_fold',       {'name': 'python-fold'}
 NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
 NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
 "NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
