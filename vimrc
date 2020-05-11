@@ -69,6 +69,8 @@ NeoBundle 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
 
+NeoBundle 'editorconfig/editorconfig-vim', {'name': 'editorconfig'}
+
 NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
 NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
 "NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
