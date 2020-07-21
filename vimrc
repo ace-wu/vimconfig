@@ -2,22 +2,24 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+set nocompatible
+
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim', {'name': 'neobundle'}
+call plug#begin('~/.vim/plugged')
 
-NeoBundle 'tpope/vim-git', {'name': 'git-hl'}
-NeoBundle 'tpope/vim-fugitive', {'name': 'git-fugitive'}
-NeoBundle 'tpope/vim-repeat', {'name': 'repeat'}
-NeoBundle 'tpope/vim-surround', {'name': 'surround'}
+Plug 'tpope/vim-git', {'as': 'git-hl'}
+Plug 'tpope/vim-fugitive', {'as': 'git-fugitive'}
+Plug 'tpope/vim-repeat', {'as': 'repeat'}
+Plug 'tpope/vim-surround', {'as': 'surround'}
 
-NeoBundle 'zxqfl/tabnine-vim', {'name': 'tabnine'}
+Plug 'zxqfl/tabnine-vim', {'as': 'tabnine'}
 
-NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
+Plug 'scrooloose/syntastic', {'as': 'syntastic'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
     let g:syntastic_error_symbol = 'x'
@@ -28,57 +30,58 @@ NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
-NeoBundle 'godlygeek/tabular',       {'name': 'tabular'}
+Plug 'godlygeek/tabular',       {'as': 'tabular'}
     map ,== :Tab /=<CR>
-NeoBundle 'gabrielelana/vim-markdown', {'name': 'markdown'}
-NeoBundle 'elzr/vim-json', {'name': 'json'}
+Plug 'gabrielelana/vim-markdown', {'as': 'markdown'}
+Plug 'elzr/vim-json', {'as': 'json'}
     let g:vim_json_syntax_conceal = 0
-NeoBundle 'autowitch/hive.vim', {'name': 'hive'}
+Plug 'autowitch/hive.vim', {'as': 'hive'}
 
-NeoBundle 'vim-scripts/python.vim--Vasiliev',  {'name': 'python-hl'}
-NeoBundle 'vim-scripts/py-coverage', {'name': 'python-coverage'}
-NeoBundle 'tmhedberg/SimpylFold',    {'name': 'python-simple-fold'}
+Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
+Plug 'vim-scripts/py-coverage', {'as': 'python-coverage', 'for': 'python'}
+Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
 
-NeoBundle 'pedrohdz/vim-yaml-folds', {'name': 'yaml-fold'}
-NeoBundle 'NLKNguyen/cloudformation-syntax.vim', {'name': 'cloudformation'}
+Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': 'yaml'}
+Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation', 'for': 'cloudformation'}
 
-NeoBundle 'vim-scripts/cflow-output-colorful', {'name': 'cflow-hl'}
-NeoBundle 'vim-scripts/LargeFile',   {'name': 'largefile'}
+Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
+Plug 'vim-scripts/LargeFile',   {'as': 'largefile'}
     let g:LargeFile=1
-NeoBundle 'vim-scripts/taglist.vim', {'name': 'taglist'}
+Plug 'vim-scripts/taglist.vim', {'as': 'taglist'}
 
-NeoBundle 'sukima/xmledit',          {'name': 'xmledit'}
-NeoBundle 'majutsushi/tagbar',       {'name': 'tagbar'}
-NeoBundle 'motus/pig.vim',           {'name': 'pig-hl'}
-NeoBundle 'vim-ruby/vim-ruby',       {'name': 'ruby'}
-NeoBundle 'chrisbra/Colorizer',      {'name': 'colorizer'}
+Plug 'sukima/xmledit',          {'as': 'xmledit'}
+Plug 'majutsushi/tagbar',       {'as': 'tagbar'}
+Plug 'motus/pig.vim',           {'as': 'pig-hl'}
+Plug 'vim-ruby/vim-ruby',       {'as': 'ruby'}
+Plug 'chrisbra/Colorizer',      {'as': 'colorizer'}
     map ,co :ColorToggle<CR>
-NeoBundle 'pangloss/vim-javascript', {'name': 'js'}
+Plug 'pangloss/vim-javascript', {'as': 'js'}
 "    let g:javascript_conceal=1
-"NeoBundle 'marijnh/tern_for_vim',    {'name': 'js-tern', 'build': 'npm install'}
-"NeoBundle 'nanotech/jellybeans.vim', {'name': 'theme-jellybeans'}
-NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
+"Plug 'marijnh/tern_for_vim',    {'as': 'js-tern', 'build': 'npm install'}
+"Plug 'nanotech/jellybeans.vim', {'as': 'theme-jellybeans'}
+Plug 'airblade/vim-gitgutter',  {'as': 'gitgutter'}
     let g:gitgutter_sign_added = '+ '
     let g:gitgutter_sign_modified = '> '
     let g:gitgutter_sign_removed = '_ '
     let g:gitgutter_sign_removed_first_line = '^ '
     let g:gitgutter_sign_modified_removed = '>_'
-NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
-NeoBundle 'chrisbra/vim-diff-enhanced', {}
+    map ,gg :GitGutterToggle<CR>
+Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
+Plug 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
-NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
+Plug 'tmux-plugins/vim-tmux',    {'as': 'tmux'}
 
-NeoBundle 'editorconfig/editorconfig-vim', {'name': 'editorconfig'}
+Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
 
-NeoBundle 'junegunn/vim-emoji', {'name': 'vim-emoji'}
+Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
 
-NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
-NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
-"NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
-"NeoBundle 'wlangstroth/vim-racket',  {'name': 'racket'}
-"NeoBundle 'tikhomirov/vim-glsl', {'name': 'glsl'}
+Plug 'ace-wu/nginx-vim-syntax',  {'as': 'nginx-hl'}
+Plug 'ace-wu/vim-distinguished', {'as': 'theme-distinguished'}
+"Plug 'ace-wu/vim-sml-coursera',  {'as': 'sml'}
+"Plug 'wlangstroth/vim-racket',  {'as': 'racket'}
+"Plug 'tikhomirov/vim-glsl', {'as': 'glsl'}
 
-NeoBundle 'eapache/rainbow_parentheses.vim',    {'name': 'rainbow'}
+Plug 'eapache/rainbow_parentheses.vim',    {'as': 'rainbow'}
     map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
     let g:rbpt_colorpairs = [
@@ -99,18 +102,9 @@ NeoBundle 'eapache/rainbow_parentheses.vim',    {'name': 'rainbow'}
         \ [198, 'firebrick3'],
         \ ]
 
-call neobundle#end()
+call plug#end()
 
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-if !has('vim_starting')
-  " Call on_source hook when reloading .vimrc.
-  call neobundle#call_hook('on_source')
-endif
 
 
 " UI settings
