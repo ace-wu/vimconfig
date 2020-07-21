@@ -20,8 +20,8 @@ NeoBundle 'zxqfl/tabnine-vim', {'name': 'tabnine'}
 NeoBundle 'scrooloose/syntastic', {'name': 'syntastic'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
-    let g:syntastic_error_symbol = "x"
-    let g:syntastic_warning_symbol = "!"
+    let g:syntastic_error_symbol = 'x'
+    let g:syntastic_warning_symbol = '!'
     let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
     let g:syntastic_yaml_checkers = ['yamllint']
     let g:syntastic_javascript_checkers = ['closurecompiler', 'jshint']
@@ -59,10 +59,10 @@ NeoBundle 'pangloss/vim-javascript', {'name': 'js'}
 "NeoBundle 'nanotech/jellybeans.vim', {'name': 'theme-jellybeans'}
 NeoBundle 'airblade/vim-gitgutter',  {'name': 'gitgutter'}
     let g:gitgutter_sign_added = '+ '
-    let g:gitgutter_sign_modified = '~ '
+    let g:gitgutter_sign_modified = '> '
     let g:gitgutter_sign_removed = '_ '
     let g:gitgutter_sign_removed_first_line = '^ '
-    let g:gitgutter_sign_modified_removed = '~_'
+    let g:gitgutter_sign_modified_removed = '>_'
 NeoBundle 'chikamichi/mediawiki.vim', {'name': 'mediawiki'}
 NeoBundle 'chrisbra/vim-diff-enhanced', {}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
