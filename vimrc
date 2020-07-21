@@ -70,6 +70,8 @@ NeoBundle 'tmux-plugins/vim-tmux',    {'name': 'tmux'}
 
 NeoBundle 'editorconfig/editorconfig-vim', {'name': 'editorconfig'}
 
+NeoBundle 'junegunn/vim-emoji', {'name': 'vim-emoji'}
+
 NeoBundle 'ace-wu/nginx-vim-syntax',  {'name': 'nginx-hl'}
 NeoBundle 'ace-wu/vim-distinguished', {'name': 'theme-distinguished'}
 "NeoBundle 'ace-wu/vim-sml-coursera',  {'name': 'sml'}
