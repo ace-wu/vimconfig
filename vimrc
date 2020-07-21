@@ -9,7 +9,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim', {'name': 'neobundle'}
-"NeoBundle 'Shougo/neobundle-vim-recipes', {'name': 'neobundle-recipes'}
 
 NeoBundle 'tpope/vim-git', {'name': 'git-hl'}
 NeoBundle 'tpope/vim-fugitive', {'name': 'git-fugitive'}
