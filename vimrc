@@ -12,10 +12,15 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-git', {'as': 'git-hl'}
-Plug 'tpope/vim-fugitive', {'as': 'git-fugitive'}
 Plug 'tpope/vim-repeat', {'as': 'repeat'}
 Plug 'tpope/vim-surround', {'as': 'surround'}
+Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
+Plug 'godlygeek/tabular', {'as': 'tabular'}
+    map ,== :Tab /=<CR>
+Plug 'vim-scripts/LargeFile', {'as': 'largefile'}
+    let g:LargeFile=1
+Plug 'chrisbra/vim-diff-enhanced', {}
+    let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 
 Plug 'zxqfl/tabnine-vim', {'as': 'tabnine'}
 
@@ -30,58 +35,54 @@ Plug 'scrooloose/syntastic', {'as': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
-Plug 'godlygeek/tabular',       {'as': 'tabular'}
-    map ,== :Tab /=<CR>
-Plug 'gabrielelana/vim-markdown', {'as': 'markdown'}
-Plug 'elzr/vim-json', {'as': 'json'}
-    let g:vim_json_syntax_conceal = 0
-Plug 'autowitch/hive.vim', {'as': 'hive'}
-
-Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
-Plug 'vim-scripts/py-coverage', {'as': 'python-coverage', 'for': 'python'}
-Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
-
-Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': 'yaml'}
-Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation', 'for': 'cloudformation'}
-
 Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
-Plug 'vim-scripts/LargeFile',   {'as': 'largefile'}
-    let g:LargeFile=1
+Plug 'majutsushi/tagbar', {'as': 'tagbar'}
 Plug 'vim-scripts/taglist.vim', {'as': 'taglist'}
 
-Plug 'sukima/xmledit',          {'as': 'xmledit'}
-Plug 'majutsushi/tagbar',       {'as': 'tagbar'}
-Plug 'motus/pig.vim',           {'as': 'pig-hl'}
-Plug 'vim-ruby/vim-ruby',       {'as': 'ruby'}
-Plug 'chrisbra/Colorizer',      {'as': 'colorizer'}
-    map ,co :ColorToggle<CR>
-Plug 'pangloss/vim-javascript', {'as': 'js'}
-"    let g:javascript_conceal=1
-"Plug 'marijnh/tern_for_vim',    {'as': 'js-tern', 'build': 'npm install'}
-"Plug 'nanotech/jellybeans.vim', {'as': 'theme-jellybeans'}
-Plug 'airblade/vim-gitgutter',  {'as': 'gitgutter'}
+Plug 'tpope/vim-git', {'as': 'git-hl'}
+Plug 'tpope/vim-fugitive', {'as': 'git-fugitive'}
+Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
     let g:gitgutter_sign_added = '+ '
     let g:gitgutter_sign_modified = '> '
     let g:gitgutter_sign_removed = '_ '
     let g:gitgutter_sign_removed_first_line = '^ '
     let g:gitgutter_sign_modified_removed = '>_'
     map ,gg :GitGutterToggle<CR>
-Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
-Plug 'chrisbra/vim-diff-enhanced', {}
-    let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
-Plug 'tmux-plugins/vim-tmux',    {'as': 'tmux'}
 
+Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
+Plug 'vim-scripts/py-coverage', {'as': 'python-coverage', 'for': 'python'}
+Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
+
+Plug 'vim-ruby/vim-ruby', {'as': 'ruby'}
+
+Plug 'pangloss/vim-javascript', {'as': 'js'}
+"    let g:javascript_conceal=1
+"Plug 'marijnh/tern_for_vim', {'as': 'js-tern', 'build': 'npm install'}
+Plug 'elzr/vim-json', {'as': 'json'}
+    let g:vim_json_syntax_conceal = 0
+
+Plug 'sukima/xmledit', {'as': 'xmledit'}
+
+Plug 'autowitch/hive.vim', {'as': 'hive'}
+Plug 'motus/pig.vim', {'as': 'pig-hl'}
+
+Plug 'gabrielelana/vim-markdown', {'as': 'markdown'}
+Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': 'yaml'}
+Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation', 'for': 'cloudformation'}
+
+Plug 'tmux-plugins/vim-tmux', {'as': 'tmux'}
+Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl'}
 Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
 
-Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
+"Plug 'ace-wu/vim-sml-coursera', {'as': 'sml'}
+"Plug 'wlangstroth/vim-racket', {'as': 'racket'}
 
-Plug 'ace-wu/nginx-vim-syntax',  {'as': 'nginx-hl'}
-Plug 'ace-wu/vim-distinguished', {'as': 'theme-distinguished'}
-"Plug 'ace-wu/vim-sml-coursera',  {'as': 'sml'}
-"Plug 'wlangstroth/vim-racket',  {'as': 'racket'}
 "Plug 'tikhomirov/vim-glsl', {'as': 'glsl'}
+Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
 
-Plug 'eapache/rainbow_parentheses.vim',    {'as': 'rainbow'}
+Plug 'chrisbra/Colorizer', {'as': 'colorizer'}
+    map ,co :ColorToggle<CR>
+Plug 'eapache/rainbow_parentheses.vim', {'as': 'rainbow'}
     map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
     let g:rbpt_colorpairs = [
@@ -101,6 +102,9 @@ Plug 'eapache/rainbow_parentheses.vim',    {'as': 'rainbow'}
         \ [210, 'DarkOrchid3'],
         \ [198, 'firebrick3'],
         \ ]
+
+Plug 'ace-wu/vim-distinguished', {'as': 'theme-distinguished'}
+"Plug 'nanotech/jellybeans.vim', {'as': 'theme-jellybeans'}
 
 call plug#end()
 
@@ -181,15 +185,15 @@ if has("autocmd")
     filetype plugin indent on
     autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal! g'\"" | endif
     autocmd BufRead,BufNewFile,BufEnter *.wsgi setlocal ft=python
-    autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
     autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     autocmd BufRead,BufNewFile,BufEnter *cloudformation/*.yaml setlocal ft=cloudformation
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
-    autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
     autocmd BufRead,BufNewFile,BufEnter *.json.tpl setlocal ft=json
     autocmd BufRead,BufNewFile,BufEnter *.yaml.tpl,*.yml.tpl setlocal ft=yaml
+    autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
+    autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
     " file system navigation
     autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
