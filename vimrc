@@ -126,7 +126,7 @@ if has("gui_running")
     set guioptions+=b   " Enable horizontal scroll bar
 else
     set t_Co=256
-    colorscheme distinguished
+    silent! colorscheme distinguished
     "highlight clear SignColumn
 endif
 
