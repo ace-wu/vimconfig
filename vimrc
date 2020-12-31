@@ -12,19 +12,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-repeat', {'as': 'repeat'}
-Plug 'tpope/vim-surround', {'as': 'surround'}
+Plug 'tpope/vim-repeat', {'as': 'vim-repeat'}
+Plug 'tpope/vim-surround', {'as': 'vim-surround'}
 Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
-Plug 'godlygeek/tabular', {'as': 'tabular'}
+Plug 'godlygeek/tabular', {'as': 'vim-tabular'}
     map ,== :Tab /=<CR>
-Plug 'vim-scripts/LargeFile', {'as': 'largefile'}
+Plug 'vim-scripts/LargeFile', {'as': 'vim-largefile'}
     let g:LargeFile=1
-Plug 'chrisbra/vim-diff-enhanced', {}
+Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 
 Plug 'zxqfl/tabnine-vim', {'as': 'tabnine'}
 
-Plug 'scrooloose/syntastic', {'as': 'syntastic'}
+Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript'], 'on': 'SyntasticCheck'}
     map ,sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
     let g:syntastic_error_symbol = 'x'
@@ -36,12 +36,12 @@ Plug 'scrooloose/syntastic', {'as': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
 "Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
-"Plug 'majutsushi/tagbar', {'as': 'tagbar'}
-"Plug 'vim-scripts/taglist.vim', {'as': 'taglist'}
+"Plug 'majutsushi/tagbar', {'as': 'vim-tagbar'}
+"Plug 'vim-scripts/taglist.vim', {'as': 'vim-taglist'}
 
 Plug 'tpope/vim-git', {'as': 'git-hl'}
 Plug 'tpope/vim-fugitive', {'as': 'git-fugitive'}
-Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
+Plug 'airblade/vim-gitgutter', {'as': 'git-gitgutter'}
     let g:gitgutter_sign_added = '+ '
     let g:gitgutter_sign_modified = '> '
     let g:gitgutter_sign_removed = '_ '
@@ -53,36 +53,36 @@ Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
 Plug 'vim-scripts/py-coverage', {'as': 'python-coverage', 'for': 'python'}
 Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
 
-Plug 'vim-ruby/vim-ruby', {'as': 'ruby'}
+Plug 'vim-ruby/vim-ruby', {'as': 'ruby-hl', 'for': 'ruby'}
 
-Plug 'pangloss/vim-javascript', {'as': 'js'}
+Plug 'pangloss/vim-javascript', {'as': 'js-hl', 'for': 'javascript'}
 "    let g:javascript_conceal=1
 "Plug 'marijnh/tern_for_vim', {'as': 'js-tern', 'build': 'npm install'}
-Plug 'elzr/vim-json', {'as': 'json'}
+Plug 'elzr/vim-json', {'as': 'json-hl', 'for': 'json'}
     let g:vim_json_syntax_conceal = 0
 
-Plug 'sukima/xmledit', {'as': 'xmledit'}
+Plug 'sukima/xmledit', {'as': 'xml-edit', 'for': ['html', 'xml']}
 
-"Plug 'autowitch/hive.vim', {'as': 'hive'}
-"Plug 'motus/pig.vim', {'as': 'pig-hl'}
+"Plug 'autowitch/hive.vim', {'as': 'hive-hl'}
+"Plug 'motus/pig.vim', {'as': 'pig-hl', 'for': 'pig'}
 
-Plug 'gabrielelana/vim-markdown', {'as': 'markdown'}
-Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': 'yaml'}
-Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation', 'for': 'cloudformation'}
+Plug 'gabrielelana/vim-markdown', {'as': 'markdown-hl', 'for': 'markdown'}
+Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': ['yaml', 'cloudformation']}
+Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation-hl', 'for': 'cloudformation'}
 
-Plug 'tmux-plugins/vim-tmux', {'as': 'tmux'}
-Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl'}
-"Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
+Plug 'tmux-plugins/vim-tmux', {'as': 'tmux-hl', 'for': 'tmux'}
+Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl', 'for': 'nginx'}
+"Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig-hl'}
 
-"Plug 'ace-wu/vim-sml-coursera', {'as': 'sml'}
-"Plug 'wlangstroth/vim-racket', {'as': 'racket'}
+"Plug 'ace-wu/vim-sml-coursera', {'as': 'sml-hl'}
+"Plug 'wlangstroth/vim-racket', {'as': 'racket-hl'}
 
-"Plug 'tikhomirov/vim-glsl', {'as': 'glsl'}
-"Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
+"Plug 'tikhomirov/vim-glsl', {'as': 'glsl-hl'}
+"Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki-hl'}
 
-Plug 'chrisbra/Colorizer', {'as': 'colorizer'}
+Plug 'chrisbra/Colorizer', {'as': 'colorizer', 'on': 'ColorToggle'}
     map ,co :ColorToggle<CR>
-Plug 'eapache/rainbow_parentheses.vim', {'as': 'rainbow'}
+Plug 'eapache/rainbow_parentheses.vim', {'as': 'rainbow-hl', 'on': 'RainbowParenthesesToggle'}
     map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
     let g:rbpt_colorpairs = [
