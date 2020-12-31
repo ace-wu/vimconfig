@@ -35,9 +35,9 @@ Plug 'scrooloose/syntastic', {'as': 'syntastic'}
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
-Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
-Plug 'majutsushi/tagbar', {'as': 'tagbar'}
-Plug 'vim-scripts/taglist.vim', {'as': 'taglist'}
+"Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
+"Plug 'majutsushi/tagbar', {'as': 'tagbar'}
+"Plug 'vim-scripts/taglist.vim', {'as': 'taglist'}
 
 Plug 'tpope/vim-git', {'as': 'git-hl'}
 Plug 'tpope/vim-fugitive', {'as': 'git-fugitive'}
@@ -63,8 +63,8 @@ Plug 'elzr/vim-json', {'as': 'json'}
 
 Plug 'sukima/xmledit', {'as': 'xmledit'}
 
-Plug 'autowitch/hive.vim', {'as': 'hive'}
-Plug 'motus/pig.vim', {'as': 'pig-hl'}
+"Plug 'autowitch/hive.vim', {'as': 'hive'}
+"Plug 'motus/pig.vim', {'as': 'pig-hl'}
 
 Plug 'gabrielelana/vim-markdown', {'as': 'markdown'}
 Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': 'yaml'}
@@ -72,13 +72,13 @@ Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation', 'for': 'clo
 
 Plug 'tmux-plugins/vim-tmux', {'as': 'tmux'}
 Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl'}
-Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
+"Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
 
 "Plug 'ace-wu/vim-sml-coursera', {'as': 'sml'}
 "Plug 'wlangstroth/vim-racket', {'as': 'racket'}
 
 "Plug 'tikhomirov/vim-glsl', {'as': 'glsl'}
-Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
+"Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki'}
 
 Plug 'chrisbra/Colorizer', {'as': 'colorizer'}
     map ,co :ColorToggle<CR>
@@ -185,15 +185,14 @@ if has("autocmd")
     filetype plugin indent on
     autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal! g'\"" | endif
     autocmd BufRead,BufNewFile,BufEnter *.wsgi setlocal ft=python
-    autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
+    "autocmd BufRead,BufNewFile,BufEnter *.go   setlocal ft=go
     autocmd BufRead,BufNewFile,BufEnter *nginx*conf* setlocal ft=nginx
     autocmd BufRead,BufNewFile,BufEnter *cloudformation/*.yaml setlocal ft=cloudformation
-    "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
 
     autocmd BufRead,BufNewFile,BufEnter *.json.tpl setlocal ft=json
     autocmd BufRead,BufNewFile,BufEnter *.yaml.tpl,*.yml.tpl setlocal ft=yaml
-    autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
-    autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
+    "autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
+    "autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
     " file system navigation
     autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
