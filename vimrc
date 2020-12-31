@@ -150,7 +150,7 @@ set nocompatible
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set incsearch hlsearch ignorecase
 set autoindent smartindent
-set ruler foldmethod=syntax "foldlevelstart=1
+set ruler nofoldenable foldmethod=syntax "foldlevelstart=1
 set backspace=2        " allow backspacing over everything in insert mode
 set viminfo='20,\"50   " read/write a .viminfo file, don't store more than 50 lines of registers
 set history=500
