@@ -225,5 +225,3 @@ if has("autocmd")
 endif
 
 let mapleader=","
-
-syntax on
