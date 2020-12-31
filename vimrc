@@ -188,6 +188,9 @@ if has("autocmd")
     "autocmd BufRead,BufNewFile,BufEnter *.markdown,*.md,*.mdown,*.mkd,*.mkdn setlocal ft=ghmarkdown
     autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
 
+    autocmd BufRead,BufNewFile,BufEnter *.json.tpl setlocal ft=json
+    autocmd BufRead,BufNewFile,BufEnter *.yaml.tpl,*.yml.tpl setlocal ft=yaml
+
     " file system navigation
     autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
     autocmd FileType netrw       nmap g. -
