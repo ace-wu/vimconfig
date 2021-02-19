@@ -163,6 +163,7 @@ set autochdir
 set modeline modelines=5
 set nowrap
 set nobackup
+set completeopt-=preview  " disable scratch preview window
 "set backup backupdir=~/tmp,.,/var/tmp/vi,/tmp
 if version >= 703
     set conceallevel=2
