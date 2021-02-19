@@ -22,7 +22,7 @@ Plug 'vim-scripts/LargeFile', {'as': 'vim-largefile'}
 Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 
-Plug 'zxqfl/tabnine-vim', {'as': 'tabnine'}
+Plug 'codota/tabnine-vim', {'as': 'tabnine'}
 
 Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript'], 'on': 'SyntasticCheck'}
     map ,sy :SyntasticCheck<CR>
