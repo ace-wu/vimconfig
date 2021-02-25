@@ -218,6 +218,7 @@ if has("autocmd")
     autocmd FileType sql         setlocal ts=2 sts=2 sw=2
     autocmd FileType hive        setlocal ts=2 sts=2 sw=2
     autocmd FileType javascript  setlocal ts=2 sts=2 sw=2 | let javaScript_fold=1
+    autocmd FileType json        setlocal ts=2 sts=2 sw=2
     autocmd FileType css         setlocal ts=2 sts=2 sw=2
     autocmd FileType html,xml    setlocal ts=2 sts=2 sw=2
     autocmd FileType html,xml    imap </ </<C-X><C-O>
