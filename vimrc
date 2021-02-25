@@ -180,6 +180,7 @@ map Q <Nop>
 " close preview window
 map ,pc :pclose<CR>
 map ,sp :set spell spelllang=en_us<CR>
+map ,jq :%!jq .<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 if has("autocmd")
