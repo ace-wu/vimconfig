@@ -3,6 +3,7 @@
 if !1 | finish | endif
 
 set nocompatible
+let mapleader=","
 
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -16,7 +17,7 @@ Plug 'tpope/vim-repeat', {'as': 'vim-repeat'}
 Plug 'tpope/vim-surround', {'as': 'vim-surround'}
 Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
 Plug 'godlygeek/tabular', {'as': 'vim-tabular'}
-    map ,== :Tab /=<CR>
+    map <leader>== :Tab /=<CR>
 Plug 'vim-scripts/LargeFile', {'as': 'vim-largefile'}
     let g:LargeFile=1
 Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
@@ -25,7 +26,7 @@ Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
 Plug 'codota/tabnine-vim', {'as': 'tabnine'}
 
 Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript'], 'on': 'SyntasticCheck'}
-    map ,sy :SyntasticCheck<CR>
+    map <leader>sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
     let g:syntastic_error_symbol = 'x'
     let g:syntastic_warning_symbol = '!'
@@ -47,10 +48,11 @@ Plug 'airblade/vim-gitgutter', {'as': 'git-gitgutter'}
     let g:gitgutter_sign_removed = '_ '
     let g:gitgutter_sign_removed_first_line = '^ '
     let g:gitgutter_sign_modified_removed = '>_'
-    map ,gg :GitGutterToggle<CR>
+    map <leader>gg :GitGutterToggle<CR>
 
 Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
-Plug 'vim-scripts/py-coverage', {'as': 'python-coverage', 'for': 'python'}
+Plug 'mgedmin/coverage-highlight.vim', {'as': 'coverage-hl', 'for': 'python'}
+    map <leader>cov :ToggleCoverage<CR>
 Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
 
 Plug 'vim-ruby/vim-ruby', {'as': 'ruby-hl', 'for': 'ruby'}
@@ -81,9 +83,9 @@ Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl', 'for': 'nginx'}
 "Plug 'chikamichi/mediawiki.vim', {'as': 'mediawiki-hl'}
 
 Plug 'chrisbra/Colorizer', {'as': 'colorizer', 'on': 'ColorToggle'}
-    map ,co :ColorToggle<CR>
+    map <leader>col :ColorToggle<CR>
 Plug 'eapache/rainbow_parentheses.vim', {'as': 'rainbow-hl', 'on': 'RainbowParenthesesToggle'}
-    map ,ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
+    map <leader>ra :RainbowParenthesesToggle<CR> :RainbowParenthesesLoadRound<CR> :RainbowParenthesesLoadSquare<CR> :RainbowParenthesesLoadBraces<CR>
     let g:rbpt_max = 15
     let g:rbpt_colorpairs = [
         \ [196, 'RoyalBlue3'],
@@ -178,9 +180,9 @@ set tags=./tags;/
 " disable "ex" mode
 map Q <Nop>
 " close preview window
-map ,pc :pclose<CR>
-map ,sp :set spell spelllang=en_us<CR>
-map ,jq :%!jq .<CR>
+map <leader>pc :pclose<CR>
+map <leader>sp :set spell! spelllang=en_us<CR>
+map <leader>jq :%!jq .<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 if has("autocmd")
@@ -224,7 +226,7 @@ if has("autocmd")
     autocmd FileType html,xml    imap </ </<C-X><C-O>
     autocmd FileType html,xml    imap <! <!--  --><esc>hhhi
     autocmd FileType xml         let xml_syntax_folding=1
-    autocmd FileType html        let g:html_indent_inctags = "html,body,head,tbody" 
+    autocmd FileType html        let g:html_indent_inctags = "html,body,head,tbody"
 
     autocmd FileType php         let php_folding=1
     "autocmd FileType r           let r_syntax_folding=1
@@ -232,5 +234,3 @@ if has("autocmd")
 
     "autocmd BufWritePost *.c,*.cpp,*.h,*.py silent! !ctags -R &>/dev/null &
 endif
-
-let mapleader=","
