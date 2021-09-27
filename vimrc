@@ -183,6 +183,11 @@ map Q <Nop>
 map <leader>pc :pclose<CR>
 map <leader>sp :set spell! spelllang=en_us<CR>
 map <leader>jq :%!jq .<CR>
+map <leader>jc :%!jq -c .<CR>
+map <leader>js :%!jq -S .<CR>
+map <leader>be :%!base64<CR>
+map <leader>bd :%!base64 -d<CR>
+map <leader>wp :w\|!python %<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 if has("autocmd")
