@@ -71,6 +71,7 @@ Plug 'sukima/xmledit', {'as': 'xml-edit', 'for': ['html', 'xml']}
 Plug 'gabrielelana/vim-markdown', {'as': 'markdown-hl', 'for': 'markdown'}
 Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': ['yaml', 'cloudformation']}
 Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation-hl', 'for': 'cloudformation'}
+Plug 'hashivim/vim-terraform', {'as': 'terraform'}
 
 Plug 'tmux-plugins/vim-tmux', {'as': 'tmux-hl', 'for': 'tmux'}
 Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl', 'for': 'nginx'}
