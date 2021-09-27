@@ -36,6 +36,11 @@ Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
 
+Plug 'ntpeters/vim-better-whitespace', {'as': 'vim-whitespace'}
+    let g:strip_whitespace_on_save = 1
+    let g:strip_whitespace_confirm = 1
+    let g:show_spaces_that_precede_tabs=1
+
 "Plug 'vim-scripts/cflow-output-colorful', {'as': 'cflow-hl'}
 "Plug 'majutsushi/tagbar', {'as': 'vim-tagbar'}
 "Plug 'vim-scripts/taglist.vim', {'as': 'vim-taglist'}
