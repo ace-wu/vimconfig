@@ -32,6 +32,7 @@ Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json
     let g:syntastic_warning_symbol = '!'
     let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
     let g:syntastic_yaml_checkers = ['yamllint']
+    let g:syntastic_python_checkers = ['mypy', 'pylint', 'flake8']
     let g:syntastic_javascript_checkers = ['closurecompiler', 'jshint']
     let g:syntastic_javascript_closurecompiler_script = '/usr/local/bin/closure-compiler'
     let g:syntastic_javascript_closurecompiler_args = '--language_in=ECMASCRIPT5'
