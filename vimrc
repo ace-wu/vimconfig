@@ -56,7 +56,6 @@ Plug 'airblade/vim-gitgutter', {'as': 'git-gitgutter'}
     let g:gitgutter_sign_modified_removed = '>_'
     map <leader>gg :GitGutterToggle<CR>
 
-Plug 'vim-scripts/python.vim--Vasiliev', {'as': 'python-hl', 'for': 'python'}
 Plug 'mgedmin/coverage-highlight.vim', {'as': 'coverage-hl', 'for': 'python'}
     map <leader>cov :ToggleCoverage<CR>
 Plug 'tmhedberg/SimpylFold', {'as': 'python-simple-fold', 'for': 'python'}
