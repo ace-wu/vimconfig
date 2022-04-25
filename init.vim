@@ -179,6 +179,7 @@ set modeline modelines=5
 set nowrap
 set nobackup
 set completeopt-=preview  " disable scratch preview window
+set hidden
 "set backup backupdir=~/tmp,.,/var/tmp/vi,/tmp
 if version >= 703
     set conceallevel=2
@@ -202,6 +203,8 @@ map <leader>be :%!base64<CR>
 map <leader>bd :%!base64 -d<CR>
 map <leader>wp :w\|!python %<CR>
 cmap w!! w !sudo tee > /dev/null %
+nnoremap <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 if has("autocmd")
     filetype plugin indent on
