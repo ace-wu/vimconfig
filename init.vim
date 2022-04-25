@@ -29,7 +29,7 @@ Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
 
 Plug 'codota/tabnine-vim', {'as': 'tabnine', 'for': ['python', 'javascript', 'typescript', 'go', 'rust', 'php', 'cpp', 'haskell', 'sh', 'bash', 'zsh']}
 
-Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript'], 'on': 'SyntasticCheck'}
+Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript']}
     map <leader>sy :SyntasticCheck<CR>
     let g:syntastic_aggregate_errors = 1
     let g:syntastic_error_symbol = 'x'
@@ -117,6 +117,9 @@ Plug 'eapache/rainbow_parentheses.vim', {'as': 'rainbow-hl', 'on': 'RainbowParen
 
 Plug 'ace-wu/vim-distinguished', {'as': 'theme-distinguished'}
 "Plug 'nanotech/jellybeans.vim', {'as': 'theme-jellybeans'}
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
