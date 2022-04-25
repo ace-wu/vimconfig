@@ -17,6 +17,23 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
+let g:coc_global_extensions = [
+\ 'coc-tabnine',
+\ 'coc-json',
+\ 'coc-yaml',
+\ 'coc-python',
+\ 'coc-clangd',
+\ 'coc-vimlsp',
+\ 'coc-html',
+\ 'coc-css',
+\ ]
+
+if has('nvim')
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } }
+else
+    Plug 'codota/tabnine-vim', {'as': 'tabnine', 'for': ['python', 'javascript', 'typescript', 'go', 'rust', 'php', 'cpp', 'haskell', 'sh', 'bash', 'zsh']}
+endif
+
 Plug 'tpope/vim-repeat', {'as': 'vim-repeat'}
 Plug 'tpope/vim-surround', {'as': 'vim-surround'}
 Plug 'junegunn/vim-emoji', {'as': 'vim-emoji'}
@@ -27,7 +44,6 @@ Plug 'vim-scripts/LargeFile', {'as': 'vim-largefile'}
 Plug 'chrisbra/vim-diff-enhanced', {'as': 'vim-diff-enhanced'}
     let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
 
-Plug 'codota/tabnine-vim', {'as': 'tabnine', 'for': ['python', 'javascript', 'typescript', 'go', 'rust', 'php', 'cpp', 'haskell', 'sh', 'bash', 'zsh']}
 
 Plug 'scrooloose/syntastic', {'as': 'syntastic', 'for': ['python', 'yaml', 'json', 'javascript']}
     map <leader>sy :SyntasticCheck<CR>
