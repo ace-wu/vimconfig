@@ -21,7 +21,7 @@ let g:coc_global_extensions = [
 \ 'coc-tabnine',
 \ 'coc-json',
 \ 'coc-yaml',
-\ 'coc-python',
+\ 'coc-pyright',
 \ 'coc-clangd',
 \ 'coc-vimlsp',
 \ 'coc-html',
