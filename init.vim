@@ -139,6 +139,17 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+
+if has('nvim')
+    if $CONDA_PREFIX == ""
+        let s:current_python_path=$CONDA_PYTHON_EXE
+    else
+        let s:current_python_path=$CONDA_PREFIX.'/bin/python'
+    endif
+    call coc#config('python', {'pythonPath': s:current_python_path})
+endif
+
+
 filetype plugin indent on
 
 
