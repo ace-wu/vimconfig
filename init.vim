@@ -97,6 +97,8 @@ Plug 'gabrielelana/vim-markdown', {'as': 'markdown-hl', 'for': 'markdown'}
 Plug 'pedrohdz/vim-yaml-folds', {'as': 'yaml-fold', 'for': ['yaml', 'cloudformation']}
 Plug 'NLKNguyen/cloudformation-syntax.vim', {'as': 'cloudformation-hl', 'for': ['yaml', 'cloudformation']}
 Plug 'hashivim/vim-terraform', {'as': 'terraform'}
+    let g:terraform_fmt_on_save=1
+    let g:terraform_align=1
 
 Plug 'tmux-plugins/vim-tmux', {'as': 'tmux-hl', 'for': 'tmux'}
 Plug 'ace-wu/nginx-vim-syntax', {'as': 'nginx-hl', 'for': 'nginx'}
@@ -245,6 +247,8 @@ if has("autocmd")
     autocmd BufRead,BufNewFile,BufEnter *.yaml.tpl,*.yml.tpl setlocal ft=yaml
     "autocmd BufRead,BufNewFile,BufEnter *.pig  setlocal ft=pig
     "autocmd BufRead,BufNewFile,BufEnter *.hql,*.q   setlocal ft=hive
+    "
+    autocmd BufRead,BufNewFile,BufEnter *.tfbackend setlocal ft=terraform
 
     " file system navigation
     autocmd BufRead,BufNewFile,BufEnter * nmap g. :e %:p:h<CR>
