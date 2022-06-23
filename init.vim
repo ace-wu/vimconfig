@@ -284,5 +284,9 @@ if has("autocmd")
     "autocmd FileType r           let r_syntax_folding=1
     "autocmd FileType sh          let sh_fold_enabled=1
 
+    autocmd FileType terraform   nmap <leader>ff :%!terraform fmt -no-color -<CR>
+    autocmd FileType python      nmap <leader>ff :%!isort - \| black -q -l 120 -<CR>
+    autocmd FileType json        nmap <leader>ff :%!jq .<CR>
+
     "autocmd BufWritePost *.c,*.cpp,*.h,*.py silent! !ctags -R &>/dev/null &
 endif
