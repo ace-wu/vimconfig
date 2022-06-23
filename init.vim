@@ -268,6 +268,7 @@ if has("autocmd")
     autocmd FileType yaml        setlocal ts=2 sts=2 sw=2
     autocmd FileType make        setlocal list noet
     autocmd FileType changelog   setlocal list et
+    autocmd FileType markdown    set nospell
 
     autocmd FileType sql         setlocal ts=2 sts=2 sw=2
     autocmd FileType hive        setlocal ts=2 sts=2 sw=2
