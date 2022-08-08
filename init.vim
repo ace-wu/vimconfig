@@ -18,7 +18,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 let g:coc_global_extensions = [
-\ 'coc-tabnine',
+"\ 'coc-tabnine',
 \ 'coc-json',
 \ 'coc-yaml',
 \ 'coc-pyright',
@@ -31,7 +31,7 @@ let g:coc_global_extensions = [
 if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } }
 else
-    Plug 'codota/tabnine-vim', {'as': 'tabnine', 'for': ['python', 'javascript', 'typescript', 'go', 'rust', 'php', 'cpp', 'haskell', 'sh', 'bash', 'zsh']}
+    "Plug 'codota/tabnine-vim', {'as': 'tabnine', 'for': ['python', 'javascript', 'typescript', 'go', 'rust', 'php', 'cpp', 'haskell', 'sh', 'bash', 'zsh']}
 endif
 
 Plug 'tpope/vim-repeat', {'as': 'vim-repeat'}
